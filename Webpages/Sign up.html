@@ -42,8 +42,9 @@
             const adduser = (ev)=>{
                 ev.preventDefault();  //to stop the form submitting
                 let user = {
-                    name: document.getElementById('name').value,
                     id: document.getElementById('rollno').value,
+                    rollno: document.getElementById('rollno').value,
+                    name: document.getElementById('name').value,
                     pwd: document.getElementById('pwd').value,
                     pwdc: document.getElementById('pwdc').value,
                 }
