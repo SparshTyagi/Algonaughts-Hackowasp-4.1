@@ -27,9 +27,29 @@
             <br> <br><br>
             <h2 class="text-center">Please Enter Your Details to Access TMS</h2><h6 class="text-center"><a href="Sign up.html">Don't have an account? Sign up here</a></h6><br>   
             <form class="form-inline">  
-                <div class="form-group"> <label class="sr-only" for="rollno">Roll Number: </label> <input type="rollno" class="form-control" id="rollno" placeholder="Enter Roll Number"> </div>  <br> 
-                <div class="form-group"> <label class="sr-only" for="pwd">Password: </label> <input type="password" class="form-control" id="pwd" placeholder="Enter password"> </div>  <br> 
-            <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button> </form>  
-        </div>  
+                <div class="form-group"> <label for="rollno">Roll Number: </label> <input type="rollno" class="form-control" id="rollno" placeholder="Enter Roll Number"> </div>  <br> 
+                <div class="form-group"> <label for="pwd">Password: </label> <input type="pwd" class="form-control" id="pwd" placeholder="Enter password"> </div>  <br> 
+            <div class="text-center"><button type="submit" class="btn btn-primary" id="btn">Submit</button></div>
+            <div id="msg">
+                <pre></pre>
+            </div>
+            </form>  
+        </div>
+        <script>
+            let users = [];
+            const adduser = (ev)=>{
+                ev.preventDefault();  //to stop the form submitting
+                let user = {
+                    id: document.getElementById('rollno').value,
+                    pwd: document.getElementById('pwd').value
+                }
+                users.push(user);
+                document.forms[0].reset();
+                localStorage.setItem('MyUserList', JSON.stringify(users) );
+            }
+            document.addEventListener('DOMContentLoaded', ()=>{
+                document.getElementById('btn').addEventListener('click', adduser);
+            });
+        </script>
     </body>
     </html>

@@ -26,12 +26,34 @@
         <div class="container">
             <h1 class="text-center"><br><b>Sign Up</b></h1><br> 
         <h2 class="text-center">Please Enter Your Details to Create a TMS Account</h2><h6 class="text-center"><a href="Login.html">Already have an account? Log in here</a></h6><br>   
-        <form class="form-inline">  
-            <div class="form-group"> <label class="sr-only" for="name">Full Name: </label> <input type="name" class="form-control" id="name" placeholder="Enter Name"> </div>  <br> 
-            <div class="form-group"> <label class="sr-only" for="rollno">Roll Number: </label> <input type="rollno" class="form-control" id="rollno" placeholder="Enter Roll Number"> </div>  <br> 
-            <div class="form-group"> <label class="sr-only" for="pwd">Password: </label> <input type="password" class="form-control" id="pwd" placeholder="Enter password"> </div>  <br> 
-            <div class="form-group"> <label class="sr-only" for="pwd">Confirm Password: </label> <input type="password" class="form-control" id="pwd" placeholder="Enter password"> </div>  <br> 
-            <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button> </form>  
-        </div>   
+        <form class="form-inline"> 
+            <div class="form-group"> <label  for="name">Full Name: </label> <input type="name" class="form-control" id="name" placeholder="Enter Name"> </div>  <br> 
+            <div class="form-group"> <label  for="rollno">Roll Number: </label> <input type="rollno" class="form-control" id="rollno" placeholder="Enter Roll Number"> </div>  <br> 
+            <div class="form-group"> <label  for="pwd">Password: </label> <input type="pwd" class="form-control" id="pwd" placeholder="Enter password"> </div>  <br> 
+            <div class="form-group"> <label  for="pwdc">Confirm Password: </label> <input type="pwdc" class="form-control" id="pwdc" placeholder="Enter password"> </div>  <br> 
+            <div class="text-center"><button type="submit" class="btn btn-primary" id="btn">Submit</button> </div>
+            <div id="msg">
+                <pre></pre>
+            </div>
+            </form>  
+        </div> 
+        <script>
+            let users = [];
+            const adduser = (ev)=>{
+                ev.preventDefault();  //to stop the form submitting
+                let user = {
+                    name: document.getElementById('name').value,
+                    id: document.getElementById('rollno').value,
+                    pwd: document.getElementById('pwd').value,
+                    pwdc: document.getElementById('pwdc').value,
+                }
+                users.push(user);
+                document.forms[0].reset();
+                localStorage.setItem('MyUserList', JSON.stringify(users) );
+            }
+            document.addEventListener('DOMContentLoaded', ()=>{
+                document.getElementById('btn').addEventListener('click', adduser);
+            });
+        </script>  
     </body>
     </html>
