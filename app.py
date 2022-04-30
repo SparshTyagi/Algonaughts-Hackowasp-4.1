@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.get("/")
 def index_get():
-    return render_template("home.html")
+    return render_template("webpages/home.html")
 
 @app.post("/predict")
 def predict():
