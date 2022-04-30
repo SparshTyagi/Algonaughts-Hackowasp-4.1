@@ -1,0 +1,83 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "headache",
+      "patterns": [
+        "having a headache",
+        "my head hurts",
+        "headache"
+      ],
+      "responses": [
+        "It's important you take a rest. If it doesnt go away try taking a small dose paracetamol",
+        "Try taking Crocin Advance"
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "book an appointment",
+        "I want to meet with a doctor",
+        "I need help",
+        "still not clear"
+      ],
+      "responses": [
+        "https://docs.google.com/forms/d/1WFrE_R0ftXuNiU-kDsRtznNHBJfz4t8G7trqvm8NKbE/viewform?edit_requested=true"
+      ]
+    },
+    {
+      "tag": "dolo650",
+      "patterns": [
+        "What is dolo 650 for",
+        "dolo 650",
+        "should I take dolo"
+      ],
+      "responses": [
+        "Dolo is a strong paracetamol useful for fevers",
+        "Only take dolo incase of a high fever"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    }
+  ]
+}
