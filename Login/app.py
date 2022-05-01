@@ -8,11 +8,11 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    rollno = db.Column(db.String(100), unique=True)
+    username = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
 
-    def __init__(self, rollno, password):
-        self.rollno = rollno
+    def __init__(self, username, password):
+        self.username = username
         self.password = password
 
 
@@ -28,7 +28,7 @@ def index():
 def register():
     if request.method == 'POST':
         try:
-            db.session.add(User(rollno=request.form['rollno'], password=request.form['password']))
+            db.session.add(User(username=request.form['username'], password=request.form['password']))
             db.session.commit()
             return redirect(url_for('login'))
         except:
@@ -42,9 +42,9 @@ def login():
     if request.method == 'GET':
         return render_template('Webpages\login.html')
     else:
-        u = request.form['rollno']
+        u = request.form['username']
         p = request.form['password']
-        data = User.query.filter_by(rollno=u, password=p).first()
+        data = User.query.filter_by(username=u, password=p).first()
         if data is not None:
             session['logged_in'] = True
             return redirect(url_for('index'))
