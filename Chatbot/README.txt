@@ -1,1 +1,0 @@
-This is the algonaughts Hackowasp 4.1 Project attempting to impliment a working medical system for Thapar University
