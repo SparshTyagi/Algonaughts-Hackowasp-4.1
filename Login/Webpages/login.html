@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <link rel="stylesheet" href="https//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+    <script src="https//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <body>
+        <nav class="navbar-dark bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-white">
+                    <div class="text-center"><a href="Login.html" class="link-light"><b>Welcome to Thapar Medical System (TMS)</b></a></div>
+                    <img src="Images\Caduceus.png" class="img-responsive center-block d-block mx-auto" alt="Sample Image" width="100" height="100">
+                </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+        <div class="container">
+            <h1 class="text-center"><br><b>Log in</b></h1><br>
+            <h2 class="text-center">Please Enter Your Details to access your TMS Account</h2><h6 class="text-center"><a href="Login\Webpages\login.html">Don't have an account? Sign up here</a></h6><br>   
+            <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="/login">
+					<span class="login100-form-title p-b-51">
+						Login
+					</span>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="flex-sb-m w-full p-t-3 p-b-24">
+						<div>
+							<a href="{{ url_for('register')}}" class="txt1">
+								Sign Up
+							</a>
+						</div>
+					</div>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div></div>
+<div class="text-center"><button type="submit" class="btn btn-primary" id="btn">Submit</button> </div>
+<div id="msg">
+    <pre></pre>
+</div>
+</body>
+</html>
